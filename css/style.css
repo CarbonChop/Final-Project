@@ -1,0 +1,514 @@
+@font-face {
+    font-family: FortLauderdaleFont;
+    src: url(../assets/itc-garamond-std-book-narrow.otf);
+}
+  @font-face{
+    font-family: BrowardVillasFont;
+    src: url(../assets/edwardianscriptitc.ttf);
+}
+  @font-face {
+    font-family: bookFont;
+    src: url(../assets/Flamantesansbook.ttf);
+}
+@keyframes lefttoright {
+    0% {
+        -webkit-mask-size: 0%;
+        -webkit-mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1) 70%,
+            rgba(0, 0, 0, 0)
+        );
+    }
+    100% {
+        -webkit-mask-size: 100%;
+        -webkit-mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1) 70%,
+            rgba(0, 0, 0, 0)
+        );
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+    background-color: #FFF8ED;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid grey;
+    border-bottom-width: thin;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    padding: 18px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #304254;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+a:hover {
+    color: #4d6a87;
+}
+h1 {
+    visibility: hidden;
+    margin: 0;
+    height: 0;
+    width: 0;
+}
+#home {
+    display: flex;
+    background-image: url(../assets/villa\ background.jpg);
+    background-size: 130%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 54.4px;
+}
+#homeOuterContainer {
+    display: flex;
+    border: 3px solid #D1C9BD;
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+#homeInnerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D1C9BD;
+    height: 98%;
+    width: 99%;
+    color: white;
+}
+#about {
+    background-color: #642B62;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+.fortLauderdale {
+    font-family: FortLauderdaleFont;
+    font-size: 24px;
+    margin: 0;
+}
+.browardVillas{
+    font-family: BrowardVillasFont;
+    font-size: 10em;
+    margin: 0;
+}
+.countryside {
+    font-family: FortLauderdaleFont;
+    font-size: 37px;
+    line-height: 37px;
+    width: 100%;
+    text-align: center;
+    margin-left: -55px;
+    margin-right: -55px;
+}
+.bookStay {
+    font-family: bookFont;
+    background-color: #B093A8;
+    padding: 10px 20px 10px 20px ;
+    margin-top: 5px;
+}
+.countrysideContainer {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: -50px;
+}
+.left {
+    width: 35%;
+    margin-left: 20px;
+}
+.right {
+    width: 35%;
+    margin-right: 20px;
+}
+.aboutHeader {
+    font-size: 60px;
+    font-family: normal;
+}
+.aboutText {
+    font-size: 21px;
+    line-height: 30px;
+}
+.aboutImages {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.villasContainer1 {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    ". villasHeader ."
+    "villaImg1 villaImg2 villaImg3"
+    "villaType1 villaType2 villaType3"
+    "price1 price2 price3"
+    "guest1 guest2 guest3"
+    "beds1 beds2 beds3";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 170px 400px 38px 30px 20px;
+    background-color: #FFF8ED;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 60px;
+}
+.villasHeader {
+    grid-area: villasHeader;
+    font-size: 60px;
+    text-align: center;
+    color: #642B62;
+    font-family: normal;
+}
+.villasContainer {
+    display: flex;
+}
+.villaImg1 {
+    grid-area: villaImg1;
+    border-radius: 200px 200px 0px 0px;
+}
+.villaImg2 {
+    grid-area: villaImg2;
+    border-radius: 200px 200px 0px 0px;
+}
+.villaImg3 {
+    grid-area: villaImg3;
+    border-radius: 200px 200px 0px 0px;
+}
+.villaType1 {
+    grid-area: villaType1;
+    color: #642B62;
+    font-size: 23px;
+}
+.villaType2 {
+    grid-area: villaType2;
+    color: #642B62;
+    font-size: 23px;
+}
+.villaType3 {
+    grid-area: villaType3;
+    color: #642B62;
+    font-size: 23px;
+}
+.price1 {
+    grid-area: price1;
+    color: #642B62;
+    font-size: 18px;
+}
+.price2 {
+    grid-area: price2;
+    color: #642B62;
+    font-size: 18px;
+}
+.price3 {
+    grid-area: price3;
+    color: #642B62;
+    font-size: 18px;
+}
+.villaGuest1 {
+    grid-area: guest1;
+    color: #642B62;
+}
+.villaGuest2 {
+    grid-area: guest2;
+    color: #642B62;
+}
+.villaGuest3 {
+    grid-area: guest3;
+    color: #642B62;
+}
+.beds1 {
+    grid-area: beds1;
+    color: #642B62;
+}
+.beds2 {
+    grid-area: beds2;
+    color: #642B62;
+}
+.beds3 {
+    grid-area: beds3;
+    color: #642B62;
+}
+.villasContainer2 {
+    display: grid;
+    grid-template-areas: 
+    ". villaImg"
+    "gardenVilla villaImg"
+    "villaLine villaImg"
+    "villaText villaImg"
+    ". villaImg";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: #FFF8ED;
+    color: #7B2543;
+    width: 100%;
+    justify-items: center;
+}
+.gardenVilla {
+    grid-area: gardenVilla;
+    font-size: 60px;
+    font-family: normal;
+}
+.villaLine {
+    grid-area: villaLine;
+    width: 23%;
+    background-color: #7B2543;
+    border: 1px solid #7B2543;
+}
+.gardenVillaText {
+    grid-area: villaText;
+    font-family: normal;
+    font-size: 26px;
+    line-height: 34px;
+}
+.gardenVillaImg {
+    grid-area: villaImg;
+}
+.villasContainer3 {
+    display: grid;
+    grid-template-areas: 
+    ". img1 img1 img1 . . text2 . ."
+    " . img1 img1 img1 . . . . ."
+    " . img1 img1 img1 . img2 img2 img2 ."
+    ". . . . . img2 img2 img2 ."
+    ". . text1 . . img2 img2 img2 .";
+    grid-template-rows: auto 60px auto 10px 60px;
+    color: white;
+    background-color: #B093A8;
+    padding: 60px;
+}
+.captionImg1 {
+    grid-area: img1;
+}
+.captionImg2 {
+    grid-area: img2;
+}
+.caption1 {
+    grid-area: text1;
+    width: 430px;
+    text-align: center;
+    margin: 0;
+}
+.caption2 {
+    grid-area: text2;
+    text-align: center;
+    width: 430px;
+    margin-top: 0;
+}
+.caption1, .caption2 {
+    font-family: normal;
+    line-height: 30px;
+    font-size: 20px;
+}
+#offers {
+    display: grid;
+    grid-template-areas: 
+    ". header ."
+    "img1 img2 img3"
+    "head1 head2 head3"
+    "text1 text2 text3";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    background-color: #FFF8ED;
+    color: #642B62;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 70px;
+    column-gap: 50px;
+}
+.offersHeader {
+    grid-area: header;
+    font-size: 60px;
+    font-family: normal;
+    text-align: center;
+}
+.offersImg1{
+    grid-area: img1;
+}
+.offersImg2{
+    grid-area: img2;
+}
+.offersImg3{
+    grid-area: img3;
+}
+.offersImgText1 {
+    grid-area: head1;
+}
+.offersImgText2 {
+    grid-area: head2;
+}
+.offersImgText3 {
+    grid-area: head3;
+}
+.offersImgText1, .offersImgText2, .offersImgText3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.offersDesc1 {
+    grid-area: text1;
+}
+.offersDesc2 {
+    grid-area: text2;
+}
+.offersDesc3 {
+    grid-area: text3;
+}
+.offersDesc1, .offersDesc2, .offersDesc3 {
+    font-size: 19px;
+    line-height: 30px;
+}
+#testimonials {
+    display: grid;
+    grid-template-areas: 
+    ". header ."
+    "line1 line2 line3"
+    "text1 text2 text3"
+    "guestName1 guestName2 guestName3";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    background-color: #642B62;
+    color: #FFF8ED;
+    justify-content: space-evenly;
+    column-gap: 0px;
+    padding: 80px;
+}
+.testimonialsHeader {
+    grid-area: header;
+    font-size: 60px;
+    font-family: normal;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 140px;
+    margin-top: 20px;
+}
+.line1 {
+    grid-area: line1;
+}
+.line2 {
+    grid-area: line2;
+}
+.line3 {
+    grid-area: line3;
+}
+.line1, .line2, .line3 {
+    width: 50%;
+    margin-left: 0;
+}
+.testimonial1 {
+    grid-area: text1;
+}
+.testimonial2 {
+    grid-area: text2;
+}
+.testimonial3 {
+    grid-area: text3;
+}
+.testimonial1, .testimonial2, .testimonial3 {
+    line-height: 28px;
+    font-size: 19px;
+}
+.guest1 {
+    grid-area: guestName1;
+}
+.guest2 {
+    grid-area: guestName2;
+}
+.guest3 {
+    grid-area: guestName3;
+}
+.guest1, .guest2, .guest3 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: BrowardVillasFont;
+    color: #FFF8ED;
+}
+#contact {
+    display: grid;
+    grid-template-areas: 
+    "text1 text1 text1 text1 ."
+    "text2 text2 text2 text2 text2"
+    "contact contact contact . ."
+    ". . . . villa"
+    "facebook instagram twitter . villa";
+    grid-template-rows: auto 250px 10px auto;
+    grid-template-columns: 75px  75px  75px  auto 250px;
+    color: black;
+    padding: 60px 100px 60px 100px;
+    background-image: url(../assets/animated\ background.gif);
+    background-size: 1550px 790px;
+}
+.contactText1 {
+    grid-area: text1;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: normal;
+}
+.contactText2 {
+    grid-area: text2;
+    font-size: 67px;
+    margin-top: 10px;
+    font-family: normal;
+}
+.contactInfo {
+    grid-area: contact;
+    font-size: 24px;
+    margin-bottom: 0px;
+    line-height: 35px;
+}
+.contactVilla {
+    grid-area: villa;
+    font-size: 90px;
+    font-family: BrowardVillasFont;
+    margin-bottom: -15px;
+}
+.facebookLogo {
+    grid-area: facebook;
+}
+.instagramLogo {
+    grid-area: instagram;
+}
+.twitterLogo {
+    grid-area: twitter;
+}
+.fadeIn {
+    transition: all 1s;
+    opacity: 0;
+}
+.fadeIn.inview {
+    opacity: 1;
+}
+.fadeFromLeft.inview {
+    animation: lefttoright 0.5s;
+    -webkit-mask-repeat: no-repeat; 
+}
+.countryside.fadeFromLeft.inview {
+    animation: lefttoright 1s ease-in;
+    -webkit-mask-repeat: no-repeat; 
+}
